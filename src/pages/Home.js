@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { Button, View, Text } from 'react-native';
+import { Header } from 'react-native/Libraries/NewAppScreen';
 
 function Home({navigation}) {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Home Screen</Text>
-        </View>
+      <>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+        <Text>Home Screen</Text>
+      </View></>
       );
   }
 
