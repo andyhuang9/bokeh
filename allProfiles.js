@@ -1,5 +1,5 @@
-import chat from './profile-components/chat.js';
-import profile from './profile-components/profile.js'
+import chat from './src/components/chat.js';
+import profile from './src/components/profile.js'
 import HashTable from './Hashtable.js'
 let allProfiles = new HashTable();
 let matches = new HashTable();
