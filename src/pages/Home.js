@@ -8,7 +8,7 @@ import users from '../../assets/users.js';
 function Home({navigation}) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Card user={users[1]}/>
+          <Card user={users[3]}/>
 
         </View>
       );

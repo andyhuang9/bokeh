@@ -53,18 +53,18 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 10,
     overflow: 'hidden',
-    // justifyContent: 'flex-end',
   },
   cardInner: {
     padding: 10,
   },
   name: {
     fontSize: 30,
-    color: 'white',
+    color: 'orange',
     fontWeight: 'bold',
   },
   bio: {
     fontSize: 18,
+    font:'Montserrat',
     color: 'black',
     lineHeight: 25,
   },
