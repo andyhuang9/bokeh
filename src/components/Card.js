@@ -2,10 +2,9 @@ import React from 'react';
 import {SafeAreaView, ScrollView, Image, Text, ImageBackground, View, StyleSheet, FlatList} from 'react-native';
 
 const Card = props => {
-  const {name, image, bio} = props.user;
+  const {name, image, bio, gear, location, role} = props.user;
   return (
-    <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.card}>
-      {/* <View style={styles.card}> */}
+    <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.card} scrollEventThrottle={16}>
       <ImageBackground
         source={{
           uri: image,
@@ -14,31 +13,20 @@ const Card = props => {
 
         <View style={styles.cardInner}>
           <Text style={styles.name}>{name}</Text>
-          <Text style={styles.bio}>{bio}</Text>
-          <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
         </View>
       </ImageBackground>
-      <ImageBackground
-        source={{
-          uri: image,
-        }}
-        style={styles.image}>
-
-        <View style={styles.cardInner}>
-          <Text style={styles.name}>{name}</Text>
-          <Text style={styles.bio}>{bio}</Text>
-          <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
-        </View>
-      </ImageBackground>
-    {/* </View> */}
+      <Text style={styles.bio}>
+        Role: {role} 
+      </Text>
+      <Text style={styles.bio}>
+        Gear: {gear} 
+      </Text>
+      <Text style={styles.bio}>Location: {location}</Text>
+      <Text style={styles.bio}>
+        {bio}
+      </Text>
     </ScrollView>
 
-    // <ScrollView scrollEventThrottle={16}>
-    //   <Text>
-    //     Hello There
-    //   </Text>
-      
-    // </ScrollView>
     
   );
 };
@@ -77,7 +65,7 @@ const styles = StyleSheet.create({
   },
   bio: {
     fontSize: 18,
-    color: 'white',
+    color: 'black',
     lineHeight: 25,
   },
 });

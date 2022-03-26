@@ -4,7 +4,11 @@ export default [
       name: 'Vadim Savin',
       image:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim1.JPG',
-      bio: 'I will be the semicolons to your code',
+      bio: 'I love street photography',
+      gear: 'Sony a7iii, 50mm sigma lens',
+      location: "Vancouver",
+      role: 'Photographer'
+
     },
     {
       id: '2',
@@ -12,6 +16,10 @@ export default [
       image:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png',
       bio: 'A dude with a rocket is looking for a gal with fuel',
+      gear: 'Sony a7iii, 50mm sigma lens',
+      location: "Vancouver",
+      role: 'Photographer'
+
     },
     {
       id: '3',
@@ -19,6 +27,10 @@ export default [
       image:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/zuck.jpeg',
       bio: 'No need to send me your nudes, I already saw them',
+      gear: 'Sony a7iii, 50mm sigma lens',
+      location: "Vancouver",
+      role: 'Photographer'
+
     },
     {
       id: '4',
@@ -26,6 +38,10 @@ export default [
       image:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/jeff.jpeg',
       bio: 'CEO, entrepreneur born in 1964, Jeffrey, Jeffrey Bezos',
+      gear: 'Sony a7iii, 50mm sigma lens',
+      location: "Vancouver",
+      role: 'Photographer'
+
     },
     {
       id: '5',
@@ -33,5 +49,9 @@ export default [
       image:
         'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim1.JPG',
       bio: 'Hola',
+      gear: 'Sony a7iii, 50mm sigma lens',
+      location: "Vancouver",
+      role: 'Photographer'
+
     },
   ];
