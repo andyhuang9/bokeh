@@ -7,7 +7,6 @@ import {
 	Image, 
 	TouchableHighlight,
 } from 'react-native';
-import { circle } from 'react-native/Libraries/Animated/Easing';
 
 function Match(props) {
 	if (props.notifBool) {
