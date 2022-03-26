@@ -1,1 +1,1 @@
-# when-2-shoot
+# When2Shoot
