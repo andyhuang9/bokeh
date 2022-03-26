@@ -4,29 +4,49 @@ import {SafeAreaView, ScrollView, Image, Text, ImageBackground, View, StyleSheet
 const Card = props => {
   const {name, image, bio} = props.user;
   return (
-    <ScrollView>
-      <View style={styles.card}>
-      <Image
+    <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.card}>
+      {/* <View style={styles.card}> */}
+      <ImageBackground
         source={{
           uri: image,
         }}
         style={styles.image}>
-          </Image>
+
         <View style={styles.cardInner}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.bio}>{bio}</Text>
           <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
         </View>
-    </View>
+      </ImageBackground>
+      <ImageBackground
+        source={{
+          uri: image,
+        }}
+        style={styles.image}>
+
+        <View style={styles.cardInner}>
+          <Text style={styles.name}>{name}</Text>
+          <Text style={styles.bio}>{bio}</Text>
+          <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
+        </View>
+      </ImageBackground>
+    {/* </View> */}
     </ScrollView>
+
+    // <ScrollView scrollEventThrottle={16}>
+    //   <Text>
+    //     Hello There
+    //   </Text>
+      
+    // </ScrollView>
     
   );
 };
 
 const styles = StyleSheet.create({
   card: {
-    width: '30%',
-    height: '30%',
+    width: '90%',
+    height: '90%',
     borderRadius: 10,
     backgroundColor: '#fefefe',
 
@@ -41,12 +61,11 @@ const styles = StyleSheet.create({
     elevation: 11,
   },
   image: {
-    width: '90%',
+    width: '100%',
     height: '100%',
     borderRadius: 10,
     overflow: 'hidden',
-
-    justifyContent: 'flex-end',
+    // justifyContent: 'flex-end',
   },
   cardInner: {
     padding: 10,
