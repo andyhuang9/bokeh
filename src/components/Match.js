@@ -7,15 +7,15 @@ import {
 	Image, 
 } from 'react-native';
 
-function Match(matchName, avatarFile) {
+function Match(props) {
 	return (
 		<SafeAreaView style={styles.match}>
 			<Image 
 				style={styles.avatarStyle} 
 				resizeMode='center'
-				source={avatarFile}
+				source={props.avatarFile}
 			/>
-			<Text style={styles.name}>{matchName}</Text>
+			<Text style={styles.name}>{props.matchName}</Text>
 			<Text></Text>
 		</SafeAreaView>
 		
@@ -24,7 +24,7 @@ function Match(matchName, avatarFile) {
 
 const styles = StyleSheet.create({
 	match: {
-		backgroundColor: '#fff',
+		backgroundColor: 'dodgerblue',
 		flex: 0.2,
 		justifyContent: 'flex-start',
 	},
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 		flex: 0.1,
 		marginLeft: 15,
 		fontWeight: 'bold',
-		fontSize: '10',
+		fontSize: 10,
 		color: 'black',
 	},
 })
