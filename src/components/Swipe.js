@@ -2,7 +2,7 @@
 // import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 // import Swiper from "react-native-deck-swiper";
 // import Card from "./Card";
-// import carddata from "./carddata";
+// import carddata from "../../assets/users.js";
 
 // const Swipe = () => {
 //   const [index, setIndex] = useState(0);
