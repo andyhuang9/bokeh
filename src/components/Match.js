@@ -7,27 +7,42 @@ import {
 	Image, 
 	TouchableHighlight,
 } from 'react-native';
+import { circle } from 'react-native/Libraries/Animated/Easing';
 
 function Match(props) {
-	return (
-		<SafeAreaView style={styles.match}>
-			<TouchableHighlight style={styles.avatarContainer}>
-			<Image 
-				style={styles.avatarStyle} 
-				resizeMode='center'
-				source={props.avatarFile}
-			/>
-			</TouchableHighlight>
-			<Text style={styles.name}>{props.matchName}</Text>
-			<Text></Text>
-		</SafeAreaView>
-		
-	);
+	if (props.notifBool) {
+		return (
+			<SafeAreaView style={styles.match}>
+				<TouchableHighlight style={styles.avatarContainer}>
+				<Image 
+					style={styles.avatarStyle} 
+					resizeMode='center'
+					source={props.avatarFile}
+				/>
+				</TouchableHighlight>
+				<Text style={styles.name}>{props.matchName}</Text>
+				<TouchableHighlight style={styles.circle}><View/></TouchableHighlight>
+			</SafeAreaView>
+		);
+	} else {
+		return (
+			<SafeAreaView style={styles.match}>
+				<TouchableHighlight style={styles.avatarContainer}>
+				<Image 
+					style={styles.avatarStyle} 
+					resizeMode='center'
+					source={props.avatarFile}
+				/>
+				</TouchableHighlight>
+				<Text style={[styles.name, {fontWeight: 'normal'}]}>{props.matchName}</Text>
+			</SafeAreaView>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
 	match: {
-		backgroundColor: 'black',
+		backgroundColor: 'white',
 		flex: 0.13,
 		justifyContent: 'flex-start',
 		flexDirection: 'row',
@@ -55,14 +70,25 @@ const styles = StyleSheet.create({
 		marginLeft: 20,
 		fontWeight: 'bold',
 		fontSize: 15,
-		color: 'white',
+		color: 'black',
 		alignSelf:'center',
-		// textShadowColor: "rgba(0, 0, 0, 0.75)",
-    	// textShadowOffset: { width: -1, height: 1 },
-    	// textShadowRadius: 15,
+	},
+	// message: {
+	// 	flex: 0.5,
+	// 	marginLeft: 20,
+	// 	fontSize: 15,
+	// 	color: 'grey',
+	// 	alignSelf:'center',
+	// },
+	circle: {
+		height: 10,
+		width: 10,
+		borderRadius: 5,
+		alignSelf: 'center',
+		position: 'absolute', 
+		right: 20,
+		backgroundColor: 'orange',
 	},
 })
-
-
 
 export default Match;
