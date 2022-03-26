@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, ScrollView, Image, Text, ImageBackground, View, StyleSheet, FlatList} from 'react-native';
 
 const Card = props => {
-  const {name, image, bio} = props.user;
+  const {name, image, bio, gear, role, location} = props.user;
   return (
     <ScrollView contentContainerStyle={{flexGrow: 1}} style={styles.card}>
       {/* <View style={styles.card}> */}
@@ -14,22 +14,20 @@ const Card = props => {
 
         <View style={styles.cardInner}>
           <Text style={styles.name}>{name}</Text>
-          <Text style={styles.bio}>{bio}</Text>
-          <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
         </View>
       </ImageBackground>
-      <ImageBackground
-        source={{
-          uri: image,
-        }}
-        style={styles.image}>
-
-        <View style={styles.cardInner}>
-          <Text style={styles.name}>{name}</Text>
-          <Text style={styles.bio}>{bio}</Text>
-          <Text style={styles.bio}>alskdjfhslkdfjglksjhfdlgsldfkjhglskdjfhgslkjhdflkghslfjkhglskjdfhlsldg</Text>
-        </View>
-      </ImageBackground>
+      <Text style={styles.bio}>
+          Gear: {gear}
+      </Text>
+      <Text style={styles.bio}>
+          Location: {location}
+      </Text>
+      <Text style={styles.bio}>
+          Role: {role}
+      </Text>
+      <Text style={styles.bio}>
+          {bio}
+      </Text>
     {/* </View> */}
     </ScrollView>
 
@@ -76,7 +74,6 @@ const styles = StyleSheet.create({
   },
   bio: {
     fontSize: 18,
-    font:'Montserrat',
     color: 'black',
     lineHeight: 25,
   },
