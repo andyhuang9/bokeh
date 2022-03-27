@@ -16,6 +16,8 @@ const Card = props => {
           <Text style={styles.name}>{name}</Text>
         </View>
       </ImageBackground>
+      <View style={styles.bioHolder}>
+
       <Text style={styles.bio}>
           Gear: {gear}
       </Text>
@@ -26,8 +28,9 @@ const Card = props => {
           Role: {role}
       </Text>
       <Text style={styles.bio}>
-          {bio}
+          Bio: {bio}
       </Text>
+      </View>
     {/* </View> */}
     </ScrollView>
 
@@ -77,6 +80,12 @@ const styles = StyleSheet.create({
     color: 'black',
     lineHeight: 25,
   },
+  bioHolder: {
+    fontWeight: 'bold',
+    padding: 10,
+    backgroundColor: '#fefefe',
+    
+  }
 });
 
 export default Card;
