@@ -26,8 +26,9 @@ function Login({navigation}) {
     },
    
     image: {
-
-      margin: 40,
+      width: "80%",
+      margin: 10,
+      resizeMode: "contain",
     },
    
     loginBtn: {
