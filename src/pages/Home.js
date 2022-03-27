@@ -1,18 +1,20 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { Button, View, Text , TouchableWithoutFeedback} from 'react-native';
 import Card from '../components/Card';
 import users from '../../assets/users.js';
 
-let index = 0;
+
 
 function Home({navigation}) {
-  const swipeNext = () => {
-    index = (index + 1) % 4;
-  }
+
+  const [count, setCount] = useState(0);
+
   return (
-    <TouchableWithoutFeedback onPress={swipeNext}>
+    <TouchableWithoutFeedback>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Card user={users[index]}/>
+        <Card user={users[count]}/>
+        <Button title="Like" onPress={() => setCount(count + 1)} />
       </View>
     </TouchableWithoutFeedback>
   );
